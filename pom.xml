@@ -20,6 +20,59 @@
 	        <artifactId>javax.ws.rs-api</artifactId>
 	        <version>2.0.1</version>
 	</dependency>
+
+	<!-- JavaEE -->
+	<!-- 
+    <dependency>
+      <groupId>org.jboss.spec</groupId>
+      <artifactId>jboss-javaee-7.0</artifactId>
+      <version>1.0.2.Final</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+     -->
+
+	<dependency>
+	    <groupId>org.jboss.resteasy</groupId>
+	    <artifactId>resteasy-spring</artifactId>
+	    <version>3.0.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.jboss.resteasy</groupId>
+	    <artifactId>resteasy-client</artifactId>
+	    <version>3.0.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.jboss.resteasy</groupId>
+	    <artifactId>resteasy-jaxb-provider</artifactId>
+	    <version>3.0.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.12</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-core</artifactId>
+	    <version>1.10.19</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.jboss.spec.javax.servlet</groupId>
+	    <artifactId>jboss-servlet-api_3.1_spec</artifactId>
+	    <version>1.0.0.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.jboss.resteasy</groupId>
+	    <artifactId>tjws</artifactId>
+	    <version>3.0.10.Final</version>
+	    <scope>test</scope>
+	</dependency>
+
   </dependencies>
   
     <build>
