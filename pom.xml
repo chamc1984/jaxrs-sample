@@ -76,6 +76,19 @@
   </dependencies>
   
     <build>
+    	<pluginManagement>
+    		<plugins>
+    			<!-- JaCoCo -->
+    			<plugin>
+    				<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-surefire-plugin</artifactId>
+    				<configuration>
+    					<argLine>${jacocoArgs} -Xmx256m -XX:MaxPermSize=256m</argLine>
+    				</configuration>
+    			</plugin>
+    		</plugins>
+    	</pluginManagement>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -94,7 +107,44 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+            <!-- JaCoCo -->
+            <plugin>
+            	<groupId>org.jacoco</groupId>
+            	<artifactId>jacoco-maven-plugin</artifactId>
+            	<version>0.8.1</version>
+            	<executions>
+            		<execution>
+            			<id>prepare-agent</id>
+            			<phase>test-compile</phase>
+            			<goals>
+            				<goal>prepare-agent</goal>
+            			</goals>
+            			<configuration>
+            				<propertyName>jacocoArgs</propertyName>
+            				<includes>
+            					<include>*</include>
+            				</includes>
+            			</configuration>
+            		</execution>
+            		<execution>
+            			<id>report</id>
+            			<phase>prepare-package</phase>
+            			<goals>
+            				<goal>report</goal>
+            			</goals>
+            		</execution>
+            	</executions>
+            </plugin>
         </plugins>
     </build>
+    
+    <reporting>
+    	<plugins>
+    		<plugin>
+    			<groupId>org.jacoco</groupId>
+    			<artifactId>jacoco-maven-plugin</artifactId>
+    		</plugin>
+    	</plugins>
+    </reporting>
 
 </project>
