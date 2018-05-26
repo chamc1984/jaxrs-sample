@@ -71,7 +71,7 @@ public class ProfileResourceTest {
 	@Test
 	public void selectTest2() throws Exception {
 
-		String inputparam = "1";
+		String inputparam = "2";
 
 		Dispatcher dispatcher = MockDispatcherFactory.createDispatcher();
 		dispatcher.getRegistry().addResourceFactory(new POJOResourceFactory(ProfileResouce.class));
@@ -90,7 +90,7 @@ public class ProfileResourceTest {
 	@Test
 	public void selectTest3() throws Exception {
 
-		String inputparam = "1";
+		String inputparam = "3";
 
 		Dispatcher dispatcher = MockDispatcherFactory.createDispatcher();
 		dispatcher.getRegistry().addResourceFactory(new POJOResourceFactory(ProfileResouce.class));
