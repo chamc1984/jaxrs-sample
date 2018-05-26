@@ -3,4 +3,5 @@
 - JAX-RSのサンプルコード（パラメータなしget） + JUnitテストコード
 - GitHubへのpushトリガのJenkinsビルド連携
 - JAX-RSのサンプルコード（パラメータありget） + JUnitテストコード
-- JaCoCoプラグインインストール
+- Mavenの設定でJaCoCoプラグインインストール
+- JenkinsにもJaCoCoプラグインをインストール
